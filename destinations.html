@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surplus Destinations — Cities Where Premium Travel Deals Overflow | TravelSurplus</title>
+<meta name="description" content="Discover the world's top surplus destinations. Some cities consistently produce more premium travel deals due to oversupply, seasonal swings, and volatile demand. Find out where surplus lives.">
+<link rel="canonical" href="https://travelsurplus.com/destinations.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://travelsurplus.com/destinations.html">
+<meta property="og:title" content="Surplus Destinations — Cities Where Premium Deals Overflow">
+<meta property="og:description" content="Some cities overflow with premium travel deals. Discover the world's top surplus destinations — scored by how often luxury deals appear.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&q=80">
+<meta property="og:site_name" content="TravelSurplus">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Surplus Destinations — TravelSurplus">
+<meta name="twitter:description" content="The cities where premium travel surplus appears most often. Scored, mapped, explained.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&q=80">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --white:#fff;--black:#0a0a0a;--gray-50:#f9fafb;--gray-100:#f3f4f6;
+  --gray-200:#e5e7eb;--gray-400:#9ca3af;--gray-500:#6b7280;--gray-600:#4b5563;
+  --gray-700:#374151;--gray-800:#1f2937;--gray-900:#111827;
+  --gold:#c9a84c;--gold-light:#e8d5a0;--gold-dark:#a68a3a;
+  --blue:#1e3a5f;--blue-light:#2d5a8e;
+  --radius:12px;--radius-lg:20px;
+  --shadow:0 4px 24px rgba(0,0,0,.08);--shadow-lg:0 12px 48px rgba(0,0,0,.12);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--gray-800);
+  background:var(--white);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;font-weight:700}
+a{text-decoration:none;color:inherit;transition:color .2s}
+img{display:block;max-width:100%;height:auto}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;transition:all .4s;
+  background:rgba(255,255,255,.95);backdrop-filter:blur(20px);box-shadow:0 1px 12px rgba(0,0,0,.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--gray-900);
+  letter-spacing:-.02em}
+.logo span{color:var(--gold)}
+.nav-links{display:none;gap:28px;align-items:center}
+.nav-links a{font-size:.875rem;font-weight:500;color:var(--gray-600);letter-spacing:.02em;transition:color .3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a.active{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--black);padding:10px 24px;border-radius:50px;
+  font-weight:600;font-size:.85rem;letter-spacing:.02em;transition:all .3s;border:none;cursor:pointer}
+.nav-cta:hover{background:var(--gold-dark);transform:translateY(-1px)}
+.menu-toggle{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.menu-toggle span{width:24px;height:2px;background:var(--gray-800);transition:all .3s;border-radius:2px}
+
+/* MOBILE MENU */
+.mobile-menu{position:fixed;inset:0;background:var(--gray-900);z-index:99;display:flex;
+  flex-direction:column;align-items:center;justify-content:center;gap:32px;
+  opacity:0;pointer-events:none;transition:opacity .3s}
+.mobile-menu.open{opacity:1;pointer-events:all}
+.mobile-menu a{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--white);transition:color .2s}
+.mobile-menu a:hover{color:var(--gold)}
+.mobile-close{position:absolute;top:20px;right:20px;background:none;border:none;
+  color:var(--white);font-size:2rem;cursor:pointer;padding:8px}
+
+/* PAGE HERO */
+.page-hero{position:relative;padding:160px 0 100px;overflow:hidden;background:var(--gray-900)}
+.page-hero-bg{position:absolute;inset:0}
+.page-hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.4}
+.page-hero-overlay{position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(10,10,10,.5) 0%,rgba(10,10,10,.7) 100%)}
+.page-hero-content{position:relative;z-index:2;max-width:700px}
+.page-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.15);
+  border:1px solid rgba(201,168,76,.3);color:var(--gold-light);padding:8px 18px;
+  border-radius:50px;font-size:.78rem;font-weight:500;letter-spacing:.06em;
+  text-transform:uppercase;margin-bottom:24px;backdrop-filter:blur(8px)}
+.page-hero h1{font-size:clamp(2.2rem,5vw,3.8rem);color:var(--white);margin-bottom:16px;letter-spacing:-.02em}
+.page-hero h1 em{font-style:italic;color:var(--gold-light)}
+.page-hero-sub{font-size:clamp(1rem,2.5vw,1.15rem);color:rgba(255,255,255,.65);
+  max-width:560px;line-height:1.7;font-weight:300}
+
+/* SECTION STYLES */
+.section-label{font-size:.78rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--gold-dark);margin-bottom:12px}
+.section-title{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:16px;color:var(--gray-900)}
+.section-sub{font-size:1.05rem;color:var(--gray-500);max-width:560px;margin-bottom:56px;font-weight:300}
+
+/* INTRO SECTION */
+.intro{padding:80px 0;background:var(--white)}
+.intro-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+.intro-text h2{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:20px;color:var(--gray-900)}
+.intro-text p{font-size:1rem;color:var(--gray-500);line-height:1.8;margin-bottom:16px}
+.intro-text p strong{color:var(--gray-800)}
+.intro-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:32px}
+.intro-stat{background:var(--gray-50);padding:20px;border-radius:var(--radius);text-align:center}
+.intro-stat .num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--gold-dark)}
+.intro-stat .label{font-size:.78rem;color:var(--gray-500);margin-top:4px;text-transform:uppercase;letter-spacing:.06em}
+.intro-image{border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3}
+.intro-image img{width:100%;height:100%;object-fit:cover}
+
+/* DESTINATION CARDS */
+.destinations{padding:100px 0;background:var(--gray-50)}
+.destinations-header{text-align:center;margin-bottom:56px}
+.destinations-header .section-sub{margin-left:auto;margin-right:auto}
+.dest-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.dest-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;
+  border:1px solid var(--gray-200);transition:all .3s}
+.dest-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--gold)}
+.dest-card-img{position:relative;aspect-ratio:16/10;overflow:hidden}
+.dest-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.dest-card:hover .dest-card-img img{transform:scale(1.04)}
+.dest-card-rating{position:absolute;top:16px;left:16px;display:flex;gap:8px;flex-wrap:wrap}
+.dest-card-rating span{padding:6px 14px;border-radius:50px;font-size:.72rem;font-weight:600;backdrop-filter:blur(8px)}
+.dest-card-rating .density{background:var(--gold);color:var(--black)}
+.dest-card-rating .density.high{background:var(--gold)}
+.dest-card-rating .density.very-high{background:#d4a017;color:var(--black)}
+.dest-card-rating .density.moderate{background:rgba(201,168,76,.7);color:var(--black)}
+.dest-card-rating .deals-count{background:rgba(10,10,10,.7);color:var(--white)}
+.dest-card-body{padding:24px}
+.dest-card-body h3{font-size:1.2rem;color:var(--gray-900);margin-bottom:10px}
+.dest-card-body>p{font-size:.9rem;color:var(--gray-500);line-height:1.6;margin-bottom:16px}
+.dest-card-why{background:var(--gray-50);padding:14px 18px;border-radius:var(--radius);
+  border-left:3px solid var(--gold);margin-bottom:16px}
+.dest-card-why p{font-size:.82rem;color:var(--gray-600);line-height:1.5;font-style:italic}
+.dest-card-why strong{color:var(--gray-800);font-style:normal}
+.dest-card-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.dest-card-tags{display:flex;gap:8px;flex-wrap:wrap}
+.dest-card-tags span{font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--gold-dark);background:rgba(201,168,76,.1);padding:4px 12px;border-radius:20px}
+.dest-card-cta{background:var(--gold);color:var(--black);padding:10px 22px;border-radius:50px;
+  font-weight:600;font-size:.83rem;transition:all .3s;display:inline-block}
+.dest-card-cta:hover{background:var(--gold-dark);transform:translateY(-1px)}
+
+/* HOW IT WORKS */
+.how-works{padding:100px 0;background:var(--white)}
+.how-works-header{text-align:center;margin-bottom:56px}
+.how-works-header .section-sub{margin-left:auto;margin-right:auto}
+.hw-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.hw-card{background:var(--gray-50);padding:32px 28px;border-radius:var(--radius-lg);
+  box-shadow:var(--shadow);transition:all .3s;border:1px solid var(--gray-200)}
+.hw-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.hw-icon{width:48px;height:48px;border-radius:50%;background:rgba(201,168,76,.12);
+  display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:16px}
+.hw-card h3{font-size:1.1rem;margin-bottom:10px;color:var(--gray-900)}
+.hw-card p{font-size:.9rem;color:var(--gray-500);line-height:1.6}
+
+/* REGIONS */
+.regions{padding:100px 0;background:var(--gray-900);color:var(--white)}
+.regions-header{text-align:center;margin-bottom:56px}
+.regions .section-label{color:var(--gold)}
+.regions .section-title{color:var(--white)}
+.regions .section-sub{color:rgba(255,255,255,.5);margin-left:auto;margin-right:auto}
+.region-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.region-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius-lg);padding:32px 28px;transition:all .3s}
+.region-card:hover{background:rgba(255,255,255,.07);border-color:rgba(201,168,76,.3);
+  transform:translateY(-3px)}
+.region-card-label{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px}
+.region-card h3{font-size:1.3rem;color:var(--white);margin-bottom:12px}
+.region-card p{font-size:.9rem;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:16px}
+.region-cities{display:flex;flex-wrap:wrap;gap:8px}
+.region-cities span{font-size:.75rem;font-weight:500;color:rgba(255,255,255,.65);
+  background:rgba(255,255,255,.06);padding:5px 14px;border-radius:20px;
+  border:1px solid rgba(255,255,255,.1)}
+
+/* SEASONAL CALENDAR */
+.seasonal{padding:100px 0;background:var(--gray-50)}
+.seasonal-header{text-align:center;margin-bottom:56px}
+.seasonal-header .section-sub{margin-left:auto;margin-right:auto}
+.calendar-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.calendar-row{background:var(--white);border-radius:var(--radius);padding:20px;
+  border:1px solid var(--gray-200);transition:all .3s}
+.calendar-row:hover{box-shadow:var(--shadow);border-color:var(--gold)}
+.calendar-row-header{display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:14px;flex-wrap:wrap;gap:8px}
+.calendar-city{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;
+  color:var(--gray-900)}
+.calendar-peak-label{font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--gold-dark);background:rgba(201,168,76,.1);padding:4px 12px;border-radius:20px}
+.calendar-months{display:grid;grid-template-columns:repeat(12,1fr);gap:4px}
+.calendar-month{text-align:center;padding:8px 2px;border-radius:6px;font-size:.65rem;
+  font-weight:500;color:var(--gray-400);background:var(--gray-50);transition:all .2s}
+.calendar-month.surplus-high{background:var(--gold);color:var(--black);font-weight:600}
+.calendar-month.surplus-mod{background:rgba(201,168,76,.3);color:var(--gray-700);font-weight:500}
+.calendar-month-name{display:block;line-height:1.4}
+
+/* CTA SECTION */
+.cta{padding:80px 0;background:var(--white)}
+.cta-box{background:linear-gradient(135deg,var(--gray-900),var(--blue));
+  border-radius:var(--radius-lg);padding:48px 28px;text-align:center;position:relative;overflow:hidden}
+.cta-box::before{content:'';position:absolute;top:-50%;right:-20%;
+  width:300px;height:300px;border-radius:50%;background:rgba(201,168,76,.08)}
+.cta-box h2{font-size:clamp(1.6rem,4vw,2.4rem);color:var(--white);margin-bottom:12px;position:relative}
+.cta-box p{color:rgba(255,255,255,.6);margin-bottom:32px;font-size:.95rem;position:relative}
+.cta-form{display:flex;flex-direction:column;gap:12px;max-width:460px;margin:0 auto;position:relative}
+.cta-form input{width:100%;padding:16px 20px;border-radius:50px;border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.08);color:var(--white);font-size:.95rem;
+  font-family:'Inter',sans-serif;outline:none;transition:border-color .3s;backdrop-filter:blur(4px)}
+.cta-form input::placeholder{color:rgba(255,255,255,.4)}
+.cta-form input:focus{border-color:var(--gold)}
+.cta-form button{width:100%;padding:16px;border-radius:50px;background:var(--gold);
+  color:var(--black);font-weight:600;font-size:.95rem;border:none;cursor:pointer;
+  font-family:'Inter',sans-serif;transition:all .3s}
+.cta-form button:hover{background:var(--gold-dark)}
+
+/* FOOTER */
+.footer{padding:60px 0 30px;background:var(--gray-900);color:rgba(255,255,255,.5)}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:40px;margin-bottom:48px}
+.footer-brand .logo{font-size:1.3rem;color:var(--white);margin-bottom:12px;display:inline-block}
+.footer-brand p{font-size:.88rem;line-height:1.6;max-width:300px}
+.footer-col h4{font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px}
+.footer-col a{display:block;font-size:.9rem;color:rgba(255,255,255,.55);padding:5px 0;transition:color .2s}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;
+  display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
+.footer-bottom p{font-size:.8rem}
+.footer-bottom-links{display:flex;gap:20px}
+.footer-bottom-links a{font-size:.8rem;color:rgba(255,255,255,.4);transition:color .2s}
+.footer-bottom-links a:hover{color:var(--gold)}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.16,1,.3,1)}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+@media(min-width:640px){
+  .intro-grid{grid-template-columns:1fr 1fr}
+  .dest-grid{grid-template-columns:1fr 1fr}
+  .hw-grid{grid-template-columns:1fr 1fr}
+  .region-grid{grid-template-columns:1fr 1fr}
+  .cta-form{flex-direction:row}
+  .cta-form button{width:auto;padding:16px 32px;white-space:nowrap}
+  .footer-grid{grid-template-columns:1.5fr 1fr 1fr}
+}
+@media(min-width:900px){
+  .nav-links{display:flex}
+  .menu-toggle{display:none}
+  .dest-grid{grid-template-columns:repeat(3,1fr)}
+  .hw-grid{grid-template-columns:repeat(5,1fr)}
+  .region-grid{grid-template-columns:repeat(4,1fr)}
+  .footer-grid{grid-template-columns:1.5fr 1fr 1fr 1fr}
+  .cta-box{padding:64px 48px}
+  .container{padding:0 40px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">Travel<span>Surplus</span></a>
+    <div class="nav-links">
+      <a href="hotels.html">Hotels</a>
+      <a href="flights.html">Flights</a>
+      <a href="cruises.html">Cruises</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="destinations.html" class="active">Destinations</a>
+      <a href="coming-soon.html" class="nav-cta">Get Alerts</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="menuClose" aria-label="Close menu">&times;</button>
+  <a href="hotels.html" onclick="closeMenu()">Hotels</a>
+  <a href="flights.html" onclick="closeMenu()">Flights</a>
+  <a href="cruises.html" onclick="closeMenu()">Cruises</a>
+  <a href="experiences.html" onclick="closeMenu()">Experiences</a>
+  <a href="destinations.html" onclick="closeMenu()">Destinations</a>
+  <a href="coming-soon.html" onclick="closeMenu()" class="nav-cta" style="margin-top:12px">Get Alerts</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600&q=80" alt="World traveler with map and backpack overlooking a stunning coastal vista" loading="eager">
+  </div>
+  <div class="page-hero-overlay"></div>
+  <div class="container page-hero-content">
+    <div class="page-hero-badge">Surplus Cities</div>
+    <h1>Where surplus <em>lives.</em></h1>
+    <p class="page-hero-sub">Some cities overflow with premium travel deals. High hotel supply, volatile demand, seasonal extremes, and fierce airline competition create pockets of consistent surplus. We track them all so you know exactly where &mdash; and when &mdash; to look.</p>
+  </div>
+</section>
+
+<!-- INTRO: SURPLUS DENSITY -->
+<section class="intro">
+  <div class="container">
+    <div class="intro-grid fade-up">
+      <div class="intro-text">
+        <div class="section-label">The Concept</div>
+        <h2>Understanding Surplus Density</h2>
+        <p>Not every city produces travel surplus equally. <strong>Surplus Density measures how frequently premium deals appear in a given destination</strong> &mdash; and more importantly, why they keep appearing.</p>
+        <p>Some cities are structurally prone to surplus. Dubai built more luxury hotel rooms than its year-round demand can fill. Bali's villa boom outpaced tourist growth. Las Vegas lives and dies by conventions &mdash; miss one, and thousands of rooms sit empty. These patterns are not random. They are structural, seasonal, and repeatable.</p>
+        <p>Our <strong>Surplus Density Score</strong> tracks five key factors: demand volatility, hotel supply growth rate, seasonal amplitude, event calendar gaps, and airline route competition. The higher the score, the more frequently premium surplus appears &mdash; and the deeper the discounts tend to be.</p>
+        <div class="intro-stats">
+          <div class="intro-stat">
+            <div class="num">9</div>
+            <div class="label">Top Surplus Cities</div>
+          </div>
+          <div class="intro-stat">
+            <div class="num">4</div>
+            <div class="label">Regions Tracked</div>
+          </div>
+          <div class="intro-stat">
+            <div class="num">2,400+</div>
+            <div class="label">Properties Monitored</div>
+          </div>
+          <div class="intro-stat">
+            <div class="num">Weekly</div>
+            <div class="label">Score Updates</div>
+          </div>
+        </div>
+      </div>
+      <div class="intro-image">
+        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80" alt="Travel planning with world map and compass" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED DESTINATIONS GRID -->
+<section class="destinations">
+  <div class="container">
+    <div class="destinations-header fade-up">
+      <div class="section-label">Featured Destinations</div>
+      <h2 class="section-title">The world's top surplus cities</h2>
+      <p class="section-sub">Each destination is scored on surplus frequency, discount depth, and deal reliability. Here's where luxury leftover lives.</p>
+    </div>
+    <div class="dest-grid">
+
+      <!-- Dubai -->
+      <div class="dest-card fade-up">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=600&q=80" alt="Dubai skyline at sunset with Burj Khalifa and city lights" loading="lazy">
+          <div class="dest-card-rating">
+            <span class="density very-high">Very High Surplus</span>
+            <span class="deals-count">47 deals</span>
+          </div>
+        </div>
+        <div class="dest-card-body">
+          <h3>Dubai, UAE</h3>
+          <p>The world's most aggressive hotel market. Dubai added over 13,000 luxury rooms in the past three years alone while demand remains intensely seasonal, creating a structural oversupply that generates surplus nearly year-round.</p>
+          <div class="dest-card-why">
+            <p><strong>Why surplus thrives here:</strong> Summer temperatures exceeding 45&deg;C crater tourism demand from May through September, yet every five-star property remains fully staffed and operational. The result is occupancy rates that dip below 40% at premier resorts &mdash; and suites that drop to a fraction of winter pricing. Add an arms race between mega-properties and you get the deepest luxury discounts on Earth.</p>
+          </div>
+          <div class="dest-card-footer">
+            <div class="dest-card-tags">
+              <span>Hotels</span>
+              <span>Experiences</span>
+            </div>
+            <a href="coming-soon.html" class="dest-card-cta">Explore &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bali -->
+      <div class="dest-card fade-up">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=600&q=80" alt="Bali rice terraces with lush green tropical landscape" loading="lazy">
+          <div class="dest-card-rating">
+            <span class="density high">High Surplus</span>
+            <span class="deals-count">38 deals</span>
+          </div>
+        </div>
+        <div class="dest-card-body">
+          <h3>Bali, Indonesia</h3>
+          <p>Bali's luxury villa boom created a massive oversupply problem. Thousands of boutique properties and private villas compete for a tourist flow that, while growing, cannot absorb the sheer volume of premium inventory.</p>
+          <div class="dest-card-why">
+            <p><strong>Why surplus thrives here:</strong> The island saw a construction frenzy of private pool villas and boutique resorts, far outpacing demand growth. Midweek occupancy at luxury properties regularly sits below 35%. Wet season (November-March) compounds the problem, as many travelers avoid tropical rain &mdash; yet the weather is often perfectly fine, and properties slash prices to compensate for perception.</p>
+          </div>
+          <div class="dest-card-footer">
+            <div class="dest-card-tags">
+              <span>Villas</span>
+              <span>Hotels</span>
+            </div>
+            <a href="coming-soon.html" class="dest-card-cta">Explore &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Las Vegas -->
+      <div class="dest-card fade-up">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&q=80" alt="Las Vegas strip at night with neon lights and iconic casino resorts" loading="lazy">
+          <div class="dest-card-rating">
+            <span class="density very-high">Very High Surplus</span>
+            <span class="deals-count">52 deals</span>
+          </div>
+        </div>
+        <div class="dest-card-body">
+          <h3>Las Vegas, Nevada</h3>
+          <p>With over 150,000 hotel rooms and demand that swings wildly based on conventions, fights, and festivals, Las Vegas is a surplus machine. When the conventions leave town, the deals flood in.</p>
+          <div class="dest-card-why">
+            <p><strong>Why surplus thrives here:</strong> Vegas operates on an event-driven demand model. A major trade show can fill the entire strip; the following week, occupancy drops 30+ points overnight. Mega-resorts with 3,000+ rooms cannot scale operations up and down that fast, so they slash rates to maintain volume. Midweek stays outside of event windows are consistently the best surplus finds in the United States.</p>
+          </div>
+          <div class="dest-card-footer">
+            <div class="dest-card-tags">
+              <span>Hotels</span>
+              <span>Experiences</span>
+            </div>
+            <a href="coming-soon.html" class="dest-card-cta">Explore &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cancun -->
+      <div class="dest-card fade-up">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=600&q=80" alt="Cancun turquoise Caribbean waters with white sand beach" loading="lazy">
+          <div class="dest-card-rating">
+            <span class="density high">High Surplus</span>
+            <span class="deals-count">34 deals</span>
+          </div>
+        </div>
+        <div class="dest-card-body">
+          <h3>Cancun, Mexico</h3>
+          <p>The all-inclusive capital of the Western Hemisphere. Cancun's hotel zone has been in a perpetual expansion cycle, and the hurricane shoulder season creates dramatic price cliffs that savvy travelers exploit.</p>
+          <div class="dest-card-why">
+            <p><strong>Why surplus thrives here:</strong> Cancun's demand is brutally seasonal. Peak season (December-April) sees near-full occupancy, but the hurricane shoulder months (September-November) are a ghost town at many resorts. Properties that charge $500/night in February will accept $140 in October. The weather risk is real but overstated &mdash; actual hurricane hits are rare, and most shoulder season days are perfectly sunny.</p>
+          </div>
+          <div class="dest-card-footer">
+            <div class="dest-card-tags">
+              <span>All-Inclusive</span>
+              <span>Hotels</span>
+            </div>
+            <a href="coming-soon.html" class="dest-card-cta">Explore &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bangkok -->
+      <div class="dest-card fade-up">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&q=80" alt="Bangkok golden temple spires with traditional Thai architecture" loading="lazy">
+          <div class="dest-card-rating">
+            <span class="density high">High Surplus</span>
+            <span class="deals-count">41 deals</span>
+          </div>
+        </div>
+        <div class="dest-card-body">
+          <h3>Bangkok, Thailand</h3>
+          <p>Bangkok's luxury hotel market is one of the world's most competitive. Dozens of international five-star brands fight for the same guest pool, driving permanent price competition and generous surplus across the board.</p>
+          <div class="dest-card-why">
+            <p><strong>Why surplus thrives here:</strong> The density of luxury hotels in Bangkok's riverside and Sukhumvit corridors is staggering. Mandarin Oriental, Peninsula, Four Seasons, Capella, Rosewood, Waldorf Astoria &mdash; they all operate within minutes of each other. This fierce brand competition, combined with a favorable exchange rate and lower operating costs, means five-star surplus here can reach 60-70% below comparable rates in European or American cities.</p>
+          </div>
+          <div class="dest-card-footer">
+            <div class="dest-card-tags">
+              <span>Hotels</span>
+              <span>Flights</span>
+            </div>
+            <a href="coming-soon.html" class="dest-card-cta">Explore &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Santorini -->
+      <div class="dest-card fade-up">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1500930287596-c1ecaa210c96?w=600&q=80" alt="Santorini white-washed buildings with blue domes overlooking the Aegean Sea" loading="lazy">
+          <div class="dest-card-rating">
+            <span class="density moderate">Moderate Surplus</span>
+            <span class="deals-count">22 deals</span>
+          </div>
+        </div>
+        <div class="dest-card-body">
+          <h3>Santorini, Greece</h3>
+          <p>Santorini's boutique hotel boom has added significant caldera-view inventory. While summer demand is strong, shoulder season and new property launches consistently produce premium surplus opportunities.</p>
+          <div class="dest-card-why">
+            <p><strong>Why surplus thrives here:</strong> The island's tourism season is compressed into roughly five months (May-September). Outside that window, many properties stay open but at drastically reduced rates. New boutique hotels launching every year also create an opening-price surplus &mdash; they price aggressively to secure bookings and build reviews in their debut seasons. The result: caldera-view suites at villa-share prices in the shoulder months.</p>
+          </div>
+          <div class="dest-card-footer">
+            <div class="dest-card-tags">
+              <span>Boutique Hotels</span>
+              <span>New Openings</span>
+            </div>
+            <a href="coming-soon.html" class="dest-card-cta">Explore &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Italy (Amalfi / Positano) -->
+      <div class="dest-card fade-up">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&q=80" alt="Amalfi Coast colorful Italian cliffside village overlooking Mediterranean Sea" loading="lazy">
+          <div class="dest-card-rating">
+            <span class="density moderate">Moderate Surplus</span>
+            <span class="deals-count">26 deals</span>
+          </div>
+        </div>
+        <div class="dest-card-body">
+          <h3>Amalfi Coast, Italy</h3>
+          <p>Italy's most coveted coastline has seen a surge in luxury boutique properties. The compressed peak season and new openings along the Positano-Amalfi-Ravello corridor create reliable surplus windows.</p>
+          <div class="dest-card-why">
+            <p><strong>Why surplus thrives here:</strong> Peak season (June-August) commands astronomical rates, but the shoulder months of April-May and September-October offer nearly identical weather with dramatically lower demand. Many new luxury properties along the coast have launched in recent years, intensifying competition. Late-season surplus is particularly strong as hotels make a final push to fill rooms before closing for winter.</p>
+          </div>
+          <div class="dest-card-footer">
+            <div class="dest-card-tags">
+              <span>Hotels</span>
+              <span>Experiences</span>
+            </div>
+            <a href="coming-soon.html" class="dest-card-cta">Explore &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lisbon -->
+      <div class="dest-card fade-up">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Lisbon colorful hillside neighborhood with traditional tram and terracotta rooftops" loading="lazy">
+          <div class="dest-card-rating">
+            <span class="density high">High Surplus</span>
+            <span class="deals-count">29 deals</span>
+          </div>
+        </div>
+        <div class="dest-card-body">
+          <h3>Lisbon, Portugal</h3>
+          <p>Lisbon's hotel supply doubled in under a decade as the city became Europe's hottest destination. The construction boom outpaced sustainable demand growth, creating a buyer's market in premium hospitality.</p>
+          <div class="dest-card-why">
+            <p><strong>Why surplus thrives here:</strong> Lisbon went from an underrated gem to a tourism magnet practically overnight, triggering a massive hotel construction wave. Boutique hotels, converted palaces, and international luxury brands all arrived at once. The result: oversupply. Winter months (November-February) hit especially hard, as tourist volumes drop but hotel inventory remains static. Low-cost carrier competition on European routes adds flight surplus to the mix.</p>
+          </div>
+          <div class="dest-card-footer">
+            <div class="dest-card-tags">
+              <span>Hotels</span>
+              <span>Flights</span>
+            </div>
+            <a href="coming-soon.html" class="dest-card-cta">Explore &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Miami -->
+      <div class="dest-card fade-up">
+        <div class="dest-card-img">
+          <img src="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=600&q=80" alt="Miami South Beach aerial view with Art Deco buildings and turquoise ocean" loading="lazy">
+          <div class="dest-card-rating">
+            <span class="density high">High Surplus</span>
+            <span class="deals-count">36 deals</span>
+          </div>
+        </div>
+        <div class="dest-card-body">
+          <h3>Miami, Florida</h3>
+          <p>Miami Beach is in the midst of a luxury hotel renaissance, with new branded residences and ultra-premium properties opening at a pace the market cannot absorb during the off-peak summer months.</p>
+          <div class="dest-card-why">
+            <p><strong>Why surplus thrives here:</strong> Miami's peak season (December-April) is driven by northern snowbirds and international visitors escaping winter. Come summer, occupancy at luxury properties drops sharply as locals flee the heat and humidity. Meanwhile, new openings like the Aman Miami, Edition Residences, and Rosewood continue to add premium inventory. The gap between summer supply and summer demand is one of the widest in North America.</p>
+          </div>
+          <div class="dest-card-footer">
+            <div class="dest-card-tags">
+              <span>Hotels</span>
+              <span>Cruises</span>
+            </div>
+            <a href="coming-soon.html" class="dest-card-cta">Explore &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW SURPLUS DENSITY WORKS -->
+<section class="how-works">
+  <div class="container">
+    <div class="how-works-header fade-up">
+      <div class="section-label">Methodology</div>
+      <h2 class="section-title">How Surplus Density is scored</h2>
+      <p class="section-sub">Our scoring system evaluates five structural factors that determine how often &mdash; and how deeply &mdash; surplus appears in each destination.</p>
+    </div>
+    <div class="hw-grid">
+      <div class="hw-card fade-up">
+        <div class="hw-icon">&#9733;</div>
+        <h3>Demand Volatility</h3>
+        <p>How much does visitor demand swing week-to-week and month-to-month? High volatility means more windows of low occupancy &mdash; and more chances for surplus. Cities driven by events, conventions, or single-season tourism score highest.</p>
+      </div>
+      <div class="hw-card fade-up">
+        <div class="hw-icon">&#9650;</div>
+        <h3>Hotel Supply Growth</h3>
+        <p>Is the destination adding hotel rooms faster than demand is growing? Cities in construction booms create structural oversupply. We track year-over-year room inventory growth against tourist arrival trends to find widening gaps.</p>
+      </div>
+      <div class="hw-card fade-up">
+        <div class="hw-icon">&#9776;</div>
+        <h3>Seasonal Amplitude</h3>
+        <p>The wider the gap between peak-season pricing and off-season pricing, the more surplus exists in the troughs. We measure the ratio between the highest and lowest average rates across the calendar year for each city.</p>
+      </div>
+      <div class="hw-card fade-up">
+        <div class="hw-icon">&#9744;</div>
+        <h3>Event Calendar Gaps</h3>
+        <p>Destinations that rely on events, festivals, and conferences for occupancy spikes create predictable surplus in the dead zones between events. We map event calendars against occupancy data to pinpoint surplus windows.</p>
+      </div>
+      <div class="hw-card fade-up">
+        <div class="hw-icon">&#9992;</div>
+        <h3>Airline Route Competition</h3>
+        <p>When multiple carriers compete on the same route, flight prices drop and surplus extends beyond hotels. We track route density, carrier count, and fare competition to identify destinations with compound surplus across flights and hotels.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOP SURPLUS REGIONS -->
+<section class="regions">
+  <div class="container">
+    <div class="regions-header fade-up">
+      <div class="section-label">Global Coverage</div>
+      <h2 class="section-title">Top surplus regions</h2>
+      <p class="section-sub">Surplus patterns cluster by region. Understanding the macro dynamics helps you target the right part of the world at the right time.</p>
+    </div>
+    <div class="region-grid">
+      <div class="region-card fade-up">
+        <div class="region-card-label">Americas</div>
+        <h3>North America &amp; Caribbean</h3>
+        <p>Event-driven markets like Las Vegas and Miami produce the most volatile surplus in the Western Hemisphere. The Caribbean's hurricane shoulder season (September-November) creates a massive discount window &mdash; often with perfectly good weather. Cancun leads the pack, with all-inclusive rates dropping 60-70% from peak.</p>
+        <div class="region-cities">
+          <span>Las Vegas</span>
+          <span>Miami</span>
+          <span>Cancun</span>
+          <span>New York</span>
+          <span>Punta Cana</span>
+        </div>
+      </div>
+      <div class="region-card fade-up">
+        <div class="region-card-label">Europe</div>
+        <h3>Southern &amp; Western Europe</h3>
+        <p>Europe's surplus is driven by its compressed summer season and the construction boom in newly popular cities. Lisbon and the Amalfi Coast produce the most reliable surplus as new luxury inventory outpaces shoulder-season demand. Winter travel to Mediterranean destinations unlocks exceptional value.</p>
+        <div class="region-cities">
+          <span>Lisbon</span>
+          <span>Amalfi Coast</span>
+          <span>Santorini</span>
+          <span>Barcelona</span>
+          <span>Paris</span>
+        </div>
+      </div>
+      <div class="region-card fade-up">
+        <div class="region-card-label">Asia-Pacific</div>
+        <h3>Southeast Asia &amp; Pacific</h3>
+        <p>Asia-Pacific destinations benefit from favorable exchange rates, fierce brand competition, and structural oversupply in key markets. Bangkok's luxury hotel density is unmatched globally, while Bali's villa boom created surplus that may take years to absorb. Wet season perceptions further widen the discount window.</p>
+        <div class="region-cities">
+          <span>Bangkok</span>
+          <span>Bali</span>
+          <span>Phuket</span>
+          <span>Tokyo</span>
+          <span>Singapore</span>
+        </div>
+      </div>
+      <div class="region-card fade-up">
+        <div class="region-card-label">Middle East</div>
+        <h3>Gulf &amp; Arabian Peninsula</h3>
+        <p>The Gulf states, led by Dubai, represent the most dramatic surplus on the planet. Massive infrastructure investment and ambitious room supply targets have created a permanent oversupply in luxury segments. Summer heat drives a six-month low season that produces unbelievable five-star deals. Abu Dhabi and Doha follow similar patterns.</p>
+        <div class="region-cities">
+          <span>Dubai</span>
+          <span>Abu Dhabi</span>
+          <span>Doha</span>
+          <span>Muscat</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEASONAL CALENDAR -->
+<section class="seasonal">
+  <div class="container">
+    <div class="seasonal-header fade-up">
+      <div class="section-label">Timing Guide</div>
+      <h2 class="section-title">When surplus peaks by destination</h2>
+      <p class="section-sub">Every destination has a surplus rhythm. Gold months indicate peak surplus windows; lighter gold indicates moderate surplus availability.</p>
+    </div>
+    <div class="calendar-grid">
+
+      <div class="calendar-row fade-up">
+        <div class="calendar-row-header">
+          <span class="calendar-city">Dubai</span>
+          <span class="calendar-peak-label">Peak: May &ndash; Sep</span>
+        </div>
+        <div class="calendar-months">
+          <div class="calendar-month"><span class="calendar-month-name">Jan</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Feb</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Mar</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Apr</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">May</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Jun</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Jul</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Aug</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Sep</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Oct</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Nov</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Dec</span></div>
+        </div>
+      </div>
+
+      <div class="calendar-row fade-up">
+        <div class="calendar-row-header">
+          <span class="calendar-city">Bali</span>
+          <span class="calendar-peak-label">Peak: Nov &ndash; Mar</span>
+        </div>
+        <div class="calendar-months">
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Jan</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Feb</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Mar</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Apr</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">May</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Jun</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Jul</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Aug</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Sep</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Oct</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Nov</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Dec</span></div>
+        </div>
+      </div>
+
+      <div class="calendar-row fade-up">
+        <div class="calendar-row-header">
+          <span class="calendar-city">Las Vegas</span>
+          <span class="calendar-peak-label">Peak: Jul &ndash; Aug, Dec</span>
+        </div>
+        <div class="calendar-months">
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Jan</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Feb</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Mar</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Apr</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">May</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Jun</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Jul</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Aug</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Sep</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Oct</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Nov</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Dec</span></div>
+        </div>
+      </div>
+
+      <div class="calendar-row fade-up">
+        <div class="calendar-row-header">
+          <span class="calendar-city">Cancun</span>
+          <span class="calendar-peak-label">Peak: Sep &ndash; Nov</span>
+        </div>
+        <div class="calendar-months">
+          <div class="calendar-month"><span class="calendar-month-name">Jan</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Feb</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Mar</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Apr</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">May</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Jun</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Jul</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Aug</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Sep</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Oct</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Nov</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Dec</span></div>
+        </div>
+      </div>
+
+      <div class="calendar-row fade-up">
+        <div class="calendar-row-header">
+          <span class="calendar-city">Bangkok</span>
+          <span class="calendar-peak-label">Peak: Apr &ndash; Jun, Oct</span>
+        </div>
+        <div class="calendar-months">
+          <div class="calendar-month"><span class="calendar-month-name">Jan</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Feb</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Mar</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Apr</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">May</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Jun</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Jul</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Aug</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Sep</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Oct</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Nov</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Dec</span></div>
+        </div>
+      </div>
+
+      <div class="calendar-row fade-up">
+        <div class="calendar-row-header">
+          <span class="calendar-city">Santorini</span>
+          <span class="calendar-peak-label">Peak: Oct &ndash; Nov, Apr</span>
+        </div>
+        <div class="calendar-months">
+          <div class="calendar-month"><span class="calendar-month-name">Jan</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Feb</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Mar</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Apr</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">May</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Jun</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Jul</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Aug</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Sep</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Oct</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Nov</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Dec</span></div>
+        </div>
+      </div>
+
+      <div class="calendar-row fade-up">
+        <div class="calendar-row-header">
+          <span class="calendar-city">Amalfi Coast</span>
+          <span class="calendar-peak-label">Peak: Oct &ndash; Nov, Mar &ndash; Apr</span>
+        </div>
+        <div class="calendar-months">
+          <div class="calendar-month"><span class="calendar-month-name">Jan</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Feb</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Mar</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Apr</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">May</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Jun</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Jul</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Aug</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Sep</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Oct</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Nov</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Dec</span></div>
+        </div>
+      </div>
+
+      <div class="calendar-row fade-up">
+        <div class="calendar-row-header">
+          <span class="calendar-city">Lisbon</span>
+          <span class="calendar-peak-label">Peak: Nov &ndash; Feb</span>
+        </div>
+        <div class="calendar-months">
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Jan</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Feb</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Mar</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Apr</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">May</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Jun</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Jul</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Aug</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Sep</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Oct</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Nov</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Dec</span></div>
+        </div>
+      </div>
+
+      <div class="calendar-row fade-up">
+        <div class="calendar-row-header">
+          <span class="calendar-city">Miami</span>
+          <span class="calendar-peak-label">Peak: Jun &ndash; Sep</span>
+        </div>
+        <div class="calendar-months">
+          <div class="calendar-month"><span class="calendar-month-name">Jan</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Feb</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Mar</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Apr</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">May</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Jun</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Jul</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Aug</span></div>
+          <div class="calendar-month surplus-high"><span class="calendar-month-name">Sep</span></div>
+          <div class="calendar-month surplus-mod"><span class="calendar-month-name">Oct</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Nov</span></div>
+          <div class="calendar-month"><span class="calendar-month-name">Dec</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA / NEWSLETTER -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-box fade-up">
+      <h2>Get destination surplus alerts</h2>
+      <p>Tell us where you want to go. We'll tell you when surplus appears &mdash; and exactly why it's discounted.</p>
+      <form class="cta-form" onsubmit="handleSignup(event)">
+        <input type="email" placeholder="Enter your email" required aria-label="Email address">
+        <button type="submit">Get Alerts</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Travel<span>Surplus</span></a>
+        <p>The world's best leftover travel &mdash; before it disappears. Premium experiences at surplus prices.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="hotels.html">Hotels</a>
+        <a href="flights.html">Flights</a>
+        <a href="cruises.html">Cruises</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="events.html">Events</a>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="destinations.html">Destinations</a>
+        <a href="guides.html">Guides</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="guides.html">Guides</a>
+        <a href="coming-soon.html">Contact</a>
+        <a href="coming-soon.html">Careers</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TravelSurplus. Luxury, left over.</p>
+      <div class="footer-bottom-links">
+        <a href="coming-soon.html">Privacy</a>
+        <a href="coming-soon.html">Terms</a>
+        <a href="coming-soon.html">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const toggle=document.getElementById('menuToggle');
+const menu=document.getElementById('mobileMenu');
+const close=document.getElementById('menuClose');
+toggle.addEventListener('click',()=>menu.classList.add('open'));
+close.addEventListener('click',()=>menu.classList.remove('open'));
+function closeMenu(){menu.classList.remove('open')}
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+function handleSignup(e){e.preventDefault();window.location.href='coming-soon.html'}
+</script>
+</body>
+</html>
